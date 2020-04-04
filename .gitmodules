@@ -1,0 +1,3 @@
+[submodule "slp-unit-test-data"]
+	path = slp-unit-test-data
+	url = https://github.com/simpleledger/slp-unit-test-data.git
