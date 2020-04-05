@@ -237,7 +237,7 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
     PARSE_CHECK(chunks.length !== 6, "wrong number of chunks");
     CHECK_NEXT();
 
-    const tokenid: Buffer = itObj.reverse();
+    const tokenid: Buffer = itObj;
     PARSE_CHECK(! checkValidTokenId(tokenid), "tokenid invalid size");
     CHECK_NEXT();
 
@@ -269,7 +269,7 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
     PARSE_CHECK(chunks.length < 4, "wrong number of chunks");
     CHECK_NEXT();
 
-    const tokenid: Buffer = itObj.reverse();
+    const tokenid: Buffer = itObj;
     PARSE_CHECK(! checkValidTokenId(tokenid), "tokenid invalid size");
     CHECK_NEXT();
 
