@@ -69,5 +69,8 @@ slp-parser was designed to be very easy to port to other languages. If you are w
 
 # Change Log
 
+### 0.0.2
+- Added additional unit tests, fixed bug with child NFTs
+
 ### 0.0.1
 - Initial release
