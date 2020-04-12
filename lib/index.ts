@@ -11,13 +11,13 @@ export interface GenesisParseResult {
 };
 
 export interface MintParseResult {
-  tokenid: Buffer,
+  tokenId: Buffer,
   mintBatonVout: number,
   qty: BN
 };
 
 export interface SendParseResult {
-  tokenid: Buffer,
+  tokenId: Buffer,
   amounts: BN[]
 };
 
@@ -128,7 +128,7 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
 	throw new Error('extraction of number from buffer failed');
   };
 
-  const checkValidTokenId = (tokenid: Buffer): boolean => tokenid.length === 32;
+  const checkValidTokenId = (tokenId: Buffer): boolean => tokenId.length === 32;
 
   const chunks: Buffer[] = [];
   for (let len = extractPushdata(); len >= 0; len = extractPushdata()) {
@@ -237,8 +237,8 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
     PARSE_CHECK(chunks.length !== 6, "wrong number of chunks");
     CHECK_NEXT();
 
-    const tokenid: Buffer = itObj;
-    PARSE_CHECK(! checkValidTokenId(tokenid), "tokenid invalid size");
+    const tokenId: Buffer = itObj;
+    PARSE_CHECK(! checkValidTokenId(tokenId), "tokenId invalid size");
     CHECK_NEXT();
 
     const mintBatonVoutBuf = itObj;
@@ -255,7 +255,7 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
     const qty = bufferToBN();
 
     const actionData: MintParseResult = {
-      tokenid,
+      tokenId,
       mintBatonVout,
       qty
     };
@@ -269,8 +269,8 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
     PARSE_CHECK(chunks.length < 4, "wrong number of chunks");
     CHECK_NEXT();
 
-    const tokenid: Buffer = itObj;
-    PARSE_CHECK(! checkValidTokenId(tokenid), "tokenid invalid size");
+    const tokenId: Buffer = itObj;
+    PARSE_CHECK(! checkValidTokenId(tokenId), "tokenId invalid size");
     CHECK_NEXT();
 
     const amounts: BN[] = [];
@@ -290,7 +290,7 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
     PARSE_CHECK(amounts.length > 19, "token_amounts size is greater than 19");
 
     const actionData: SendParseResult = {
-      tokenid,
+      tokenId,
       amounts
     };
 

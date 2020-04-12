@@ -39,12 +39,12 @@ describe('PARSER', () => {
             expect(o.qty.toString()).to.equal(test.parsed.data.qty);
           } else if (test.parsed.transactionType === "MINT") {
             const o = (m.data as MintParseResult);
-            expect(o.tokenid).to.equalBytes(Buffer.from(test.parsed.data.tokenid, 'hex'));
+            expect(o.tokenId).to.equalBytes(Buffer.from(test.parsed.data.tokenId, 'hex'));
             expect(o.mintBatonVout).to.equal(test.parsed.data.mintBatonVout);
             expect(o.qty.toString()).to.equal(test.parsed.data.qty);
           } else if (test.parsed.transactionType === "SEND") {
             const o = (m.data as SendParseResult);
-            expect(o.tokenid).to.equalBytes(Buffer.from(test.parsed.data.tokenid, 'hex'));
+            expect(o.tokenId).to.equalBytes(Buffer.from(test.parsed.data.tokenId, 'hex'));
             expect(o.amounts.length).to.equal(test.parsed.data.amounts.length);
 
             for (let i=0; i<o.amounts.length; ++i) {

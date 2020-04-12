@@ -81,7 +81,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "MINT",
     "data": {
-      "tokenid": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+      "tokenId": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
       "mintBatonVout": 0,
       "qty": "100"
     }
@@ -95,7 +95,7 @@ const testdata: any[] = [
     "tokenType": 0x81,
     "transactionType": "MINT",
     "data": {
-      "tokenid": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+      "tokenId": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
       "mintBatonVout": 0,
       "qty": "100"
     }
@@ -114,7 +114,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "MINT",
     "data": {
-      "tokenid": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+      "tokenId": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
       "mintBatonVout": 0,
       "qty": "923126803391268"
     }
@@ -128,7 +128,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["66"]
     }
   }
@@ -141,7 +141,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["923126803391268"]
     }
   }
@@ -154,7 +154,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["66", "99"]
     }
   }
@@ -167,7 +167,7 @@ const testdata: any[] = [
     "tokenType": 0x41,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["1"]
     }
   }
@@ -180,7 +180,7 @@ const testdata: any[] = [
     "tokenType": 0x81,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["1"]
     }
   }
@@ -340,7 +340,7 @@ const testdata: any[] = [
     "tokenType": 0x41,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["1", "1"]
     }
   }
@@ -700,7 +700,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "MINT",
     "data": {
-      "tokenid": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+      "tokenId": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
       "mintBatonVout": 255,
       "qty": "100"
     }
@@ -714,7 +714,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "MINT",
     "data": {
-      "tokenid": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+      "tokenId": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
       "mintBatonVout": 95,
       "qty": "100"
     }
@@ -728,7 +728,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "MINT",
     "data": {
-      "tokenid": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+      "tokenId": 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
       "mintBatonVout": 2,
       "qty": "100"
     }
@@ -762,7 +762,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["1", "1", "1", "1", "1","1", "1", "1", "1", "1","1", "1", "1", "1", "1","1", "1", "1", "1"]
     }
   }
@@ -780,7 +780,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["0", "0"]
     }
   }
@@ -793,7 +793,7 @@ const testdata: any[] = [
     "tokenType": 0x01,
     "transactionType": "SEND",
     "data": {
-      "tokenid": '8888888888888888888888888888888888888888888888888888888888888888',
+      "tokenId": '8888888888888888888888888888888888888888888888888888888888888888',
       "amounts": ["18446744073709551615", "18446744073709551615", "18446744073709551615"]
     }
   }
