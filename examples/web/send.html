@@ -1,0 +1,12 @@
+<script src="../../dist/slp-parser.js"></script>
+<script>
+const slpdata ="6a04534c500001010453454e44207f8889682d57369ed0e32336f8b7e0ffec625a35cca183f4e81fde4e71a538a10800000000000027100800000000000679e1";
+const parsed = slpParser.parseSLP(slpdata);
+
+const hexDecoder = (bytes) => Array.from(bytes, (b) =>('0' + (b & 0xFF).toString(16)).slice(-2)).join('');
+
+console.log('tokenType: ', parsed.tokenType);
+console.log('transactionType: ', parsed.transactionType);
+console.log('tokenId: ', hexDecoder(parsed.data.tokenId));
+console.log('amounts: ', parsed.data.amounts.map(v => v.toString()));
+</script>
