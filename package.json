@@ -1,6 +1,6 @@
 {
   "name": "slp-parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Parse Simple Ledger Protocol OP_RETURN data segments with ease!",
   "author": "blockparty-sh",
   "license": "MIT",

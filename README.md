@@ -30,6 +30,8 @@ NOTES:
 
 This library has a single method called `parseSLP` which takes either a Buffer or a hex-string and returns an object such as described with the type definitions inside `./lib/index.ts`.
 
+There are additional examples in `examples` folder.
+
 
 ### Node.js
 ```js
@@ -68,6 +70,9 @@ slp-parser was designed to be very easy to port to other languages. If you are w
 
 
 # Change Log
+
+### 0.0.4
+- tokenid -> tokenId for consistency, additional examples
 
 ### 0.0.3
 - Fix reverse tokenid
