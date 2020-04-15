@@ -53,30 +53,30 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
 
   const extractU8 = (): BN => {
     const r: number = itObj.readUInt8(it);
-	it += 1;
-	return new BN(r);
+    it += 1;
+    return new BN(r);
   };
 
   const extractU16 = (): BN => {
     const r: number= itObj.readUInt16LE(it);
     it += 2;
-	return new BN(r);
+    return new BN(r);
   };
 
   const extractU32 = (): BN => {
     const r: number = itObj.readUInt32LE(it);
-	it += 4;
-	return new BN(r);
+    it += 4;
+    return new BN(r);
   };
 
   const extractU64 = (): BN => {
     const r1: number = itObj.readUInt32LE(it);
-	it += 4;
+    it += 4;
 
     const r2: number = itObj.readUInt32LE(it);
-	it += 4;
+    it += 4;
 
-	return new BN(r2).multipliedBy(2**32).plus(r1);
+    return new BN(r2).multipliedBy(2**32).plus(r1);
   };
 
   PARSE_CHECK(itObj.length === 0, "scriptpubkey cannot be empty");
@@ -125,7 +125,7 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
     if (itObj.length === 2) return extractU16();
     if (itObj.length === 4) return extractU32();
     if (itObj.length === 8) return extractU64();
-	throw new Error('extraction of number from buffer failed');
+    throw new Error('extraction of number from buffer failed');
   };
 
   const checkValidTokenId = (tokenId: Buffer): boolean => tokenId.length === 32;
@@ -216,15 +216,15 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
       PARSE_CHECK(! qty.isEqualTo(1), "NFT1 child token must have quantity of 1");
     }
 
-	const actionData: GenesisParseResult = {
-	  ticker,
-	  name,
+    const actionData: GenesisParseResult = {
+      ticker,
+      name,
       documentUri,
       documentHash,
       decimals,
       mintBatonVout,
       qty
-	};
+    };
 
     return {
       tokenType,
@@ -274,19 +274,19 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
     CHECK_NEXT();
 
     const amounts: BN[] = [];
-	while (cit !== chunks.length) {
-	  const amountBuf = itObj.reverse();
-	  PARSE_CHECK(amountBuf.length !== 8, "amount string size not 8 bytes");
+    while (cit !== chunks.length) {
+      const amountBuf = itObj.reverse();
+      PARSE_CHECK(amountBuf.length !== 8, "amount string size not 8 bytes");
 
-	  const value: BN = bufferToBN();
-	  amounts.push(value);
+      const value: BN = bufferToBN();
+      amounts.push(value);
 
-	  ++cit;
-	  itObj = chunks[cit];
-	  it = 0;
-	}
+      ++cit;
+      itObj = chunks[cit];
+      it = 0;
+    }
 
-	PARSE_CHECK(amounts.length === 0, "token_amounts size is 0");
+    PARSE_CHECK(amounts.length === 0, "token_amounts size is 0");
     PARSE_CHECK(amounts.length > 19, "token_amounts size is greater than 19");
 
     const actionData: SendParseResult = {
@@ -300,7 +300,7 @@ export const parseSLP = (scriptpubkey: Buffer | string): ParseResult => {
       data: actionData
     };
   } else {
-	PARSE_CHECK(true, "unknown action type");
+    PARSE_CHECK(true, "unknown action type");
   }
 
   // unreachable code
